@@ -30,9 +30,9 @@ class meshRenderer(glRenderer):
 
         self.render_mode = render_mode
         self.program_files ={}
-        self.program_files['color'] = ['renderer/shaders/simple140.fs', 'renderer/shaders/simple140.vs']
-        self.program_files['normal'] = ['renderer/shaders/normal140.fs', 'renderer/shaders/normal140.vs']
-        self.program_files['geo'] = ['renderer/shaders/colorgeo140.fs', 'renderer/shaders/colorgeo140.vs']
+        self.program_files['color'] = ['../renderer/shaders/simple140.fs', '../renderer/shaders/simple140.vs']
+        self.program_files['normal'] = ['../renderer/shaders/normal140.fs', '../renderer/shaders/normal140.vs']
+        self.program_files['geo'] = ['../renderer/shaders/colorgeo140.fs', '../renderer/shaders/colorgeo140.vs']
 
         glRenderer.__init__(self, width, height, name, self.program_files[render_mode], color_size, ms_rate)
 

@@ -37,6 +37,12 @@ def run_body_mocap(args, body_bbox_detector, body_mocap, visualizer):
             if cur_frame < len(input_data):
                 image_path = input_data[cur_frame]
                 img_original_bgr  = cv2.imread(image_path)
+                w = img_original_bgr.shape[1]
+                h = img_original_bgr.shape[0]
+                while min(w,h)>512:
+                    w = int(w*0.8)
+                    h = int(h*0.8)
+                img_original_bgr = cv2.resize(img_original_bgr,(w,h))
             else:
                 img_original_bgr = None
 

@@ -44,8 +44,8 @@ class BaseOptions():
         self.parser.add_argument('--pose_params_dim', type=int, default=48, help='number of params to be estimated')
         self.parser.add_argument('--shape_params_dim', type=int, default=10, help='number of params to be estimated')
 
-        self.parser.add_argument('--model_root', type=str, default='./extra_data', help='root dir for all the pretrained weights and pre-defined models')
-        self.parser.add_argument('--smplx_model_file', type=str, default='./extra_data/smpl/SMPLX_NEUTRAL.pkl', help='path of pretraind smpl model')
+        self.parser.add_argument('--model_root', type=str, default='../extra_data', help='root dir for all the pretrained weights and pre-defined models')
+        self.parser.add_argument('--smplx_model_file', type=str, default='../extra_data/smpl/SMPLX_NEUTRAL.pkl', help='path of pretraind smpl model')
         self.parser.add_argument('--smplx_hand_info_file', type=str, default='hand_module/SMPLX_HAND_INFO.pkl', help='path of smpl face')
         self.parser.add_argument('--mean_param_file', type=str, default='hand_module/mean_mano_params.pkl', help='path of smpl face')
 
